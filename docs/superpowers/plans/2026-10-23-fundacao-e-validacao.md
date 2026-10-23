@@ -37,6 +37,39 @@
 
 ---
 
+## Pré-requisitos
+
+### Task 0: Ambiente de desenvolvimento (sem código)
+
+**Files:** nenhum (configuração da máquina).
+
+**Interfaces:**
+- Consumes: nada.
+- Produces: Android Studio, SDK, `adb` e o A54 autorizado — necessários para todas as tasks.
+
+- [ ] **Step 1: Instalar o Android Studio**
+
+Baixe a versão estável em `developer.android.com/studio` e instale com as opções padrão. Ele traz o JDK e o SDK. Nesta máquina não há Android Studio, SDK nem `adb`; o `java` do PATH é o 8 e **não serve**.
+
+- [ ] **Step 2: Instalar os componentes do SDK**
+
+No Android Studio: `Tools → SDK Manager` → instalar a Platform mais recente, `Android SDK Build-Tools`, `Android SDK Platform-Tools` e `Android SDK Command-line Tools`.
+
+- [ ] **Step 3: Configurar o PATH**
+
+Adicione `%LOCALAPPDATA%\Android\Sdk\platform-tools` ao PATH do usuário e reabra o terminal.
+
+- [ ] **Step 4: Preparar o aparelho**
+
+No A54: `Configurações → Sobre o telefone → Informações do software` → tocar 7× em "Número da versão"; depois `Opções do desenvolvedor → Depuração USB` ligada. Conecte por USB e aceite o aviso de autorização.
+
+- [ ] **Step 5: Verificar**
+
+Run: `adb devices` e `java -version`
+Expected: o A54 aparece como `device` (não `unauthorized`); Java 17 ou superior (o que o Android Studio usa).
+
+---
+
 ### Task 1: Projeto Android mínimo com Compose
 
 **Files:**
